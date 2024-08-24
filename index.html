@@ -20,6 +20,9 @@
   -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
+    <!-- Integrating emailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <!--
     - google font link
   -->
@@ -124,15 +127,20 @@
           <ul class="social-list">
             <li class="social-item">
               <a
-                href="https://www.facebook.com/profile.php?id=100011631497649"
+                href="https://www.linkedin.com/in/aaditya-yadav-6a0876257/"
+                target="_blank"
                 class="social-link"
               >
-                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-LinkedIn"></ion-icon>
               </a>
             </li>
 
             <li class="social-item">
-              <a href="https://github.com/aaditya-29" class="social-link">
+              <a
+                href="https://github.com/aaditya-29"
+                target="_blank"
+                class="social-link"
+              >
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
@@ -140,6 +148,7 @@
             <li class="social-item">
               <a
                 href="https://www.instagram.com/aa_di_ty_a_/"
+                target="_blank"
                 class="social-link"
               >
                 <ion-icon name="logo-instagram"></ion-icon>
@@ -171,6 +180,10 @@
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Certificates</button>
             </li>
+
+            <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
 
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Contact</button>
@@ -249,24 +262,24 @@
                 </div>
               </li>
 
-              <!-- <li class="service-item">
+              <li class="service-item">
                 <div class="service-icon-box">
                   <img
-                    src="./assets/images/icon-app.svg"
-                    alt="mobile app icon"
+                    src="./assets/images/full_stack.svg"
+                    alt="full_stack icon"
                     width="40"
                   />
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Mobile apps</h4>
+                  <h4 class="h4 service-item-title">Full Stack Development</h4>
 
                   <p class="service-item-text">
-                    Professional development of applications for iOS and
-                    Android.
+                    Crafting full-stack web solutions with a focus on end-to-end
+                    functionality and performance.
                   </p>
                 </div>
-              </li> -->
+              </li>
 
               <li class="service-item">
                 <div class="service-icon-box">
@@ -549,15 +562,14 @@
               <h3 class="h3">Education</h3>
               <!-- Download Resume Button -->
               <a
-                href="./assets/Aaditya Yadav Resume.pdf"
-                download="Aaditya Yadav Resume.pdf"
+                href="./Aaditya Yadav Resume.pdf"
+                download="./Aaditya Yadav Resume.pdf"
               >
                 <img
-                  src="./assets/images/download-icon.svg"
+                  src="/assets/images/download-icon.svg"
                   alt="Download Resume"
                   id="download-button"
                 />
-                <!-- <span class="tooltip-text"> Resume</span> -->
               </a>
             </div>
 
@@ -697,7 +709,28 @@
 
               <li class="skills-item">
                 <div class="title-wrapper">
-                  <h5 class="h5">Team Work</h5>
+                  <h5 class="h5">MySQL</h5>
+                  <!-- <data value="50">50%</data> -->
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">HTML</h5>
+                  <!-- <data value="50">50%</data> -->
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Teamwork</h5>
                   <!-- <data value="50">50%</data> -->
                 </div>
 
@@ -1059,6 +1092,7 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/mail.js"></script>
 
     <!--
     - ionicon link

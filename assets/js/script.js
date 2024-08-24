@@ -1,4 +1,3 @@
-
 'use strict';
 
 
@@ -160,6 +159,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
+
+//certificates
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Get all the icons
   const icons = document.querySelectorAll(".project-item-icon-box ion-icon");
@@ -184,14 +187,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
       popup.style.display = "block";
       overlay.style.display = "block";
+      // Trigger animation by removing and adding the class
+      popup.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+      // Reset animation
+      popup.style.animation = 'none';
+      overlay.style.animation = 'none';
+      // Trigger reflow
+      popup.offsetHeight; // trigger reflow
+      popup.style.animation = 'popup-fade-in 0.5s ease forwards';
+      overlay.style.animation = 'popup-fade-in 0.5s ease forwards';
     });
   });
 
   // Close the popup when clicking the close button or the overlay
   document.addEventListener("click", function(e) {
     if (e.target.classList.contains("popup-close") || e.target.classList.contains("popup-overlay")) {
-      popup.style.display = "none";
-      overlay.style.display = "none";
+      popup.style.animation = 'popup-fade-out 0.5s ease forwards';
+      overlay.style.animation = 'popup-fade-out 0.5s ease forwards';
+      setTimeout(() => {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+        popup.classList.add("hidden");
+        overlay.classList.add("hidden");
+      }, 500); // Match duration with animation
     }
   });
 });
