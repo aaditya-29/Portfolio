@@ -1,1109 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aaditya's</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.ico"
-      type="image/x-icon"
-    />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- Integrating emailJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <!--
-    - google font link
-  -->
+    <title>Aaditya Yadav | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <body>
-    <!--
-    - #MAIN
-  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
 
+<body>
     <main>
-      <!--
-      - #SIDEBAR
-    -->
+        <header class="top-header">
+            <div class="header-left">
 
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img src="./assets/images/my-avatar.png" alt="Aaditya" width="80" />
-          </figure>
+                <img src="./assets/images/pp_photo.png" alt="Aaditya" class="avatar" />
+                <div class="info">
+                    <h1 class="name">Aaditya Yadav</h1>
+                    <p class="title">
+                        <span id="rotating-title" class="fade-in">Software Engineer</span>
+                    </p>
+                </div>
+            </div>
 
-          <div class="info-content">
-            <h1 class="name" title="Aaditya Yadav">Aaditya Yadav</h1>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <button class="navbar-link active" data-nav-link>About</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Projects</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Certificates</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-            <p class="title">Aspiring Java Developer</p>
-          </div>
+        <div class="main-content">
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
 
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
+                <section class="about-text">
+                    <p>
+                        I'm a driven Computer Science and Engineering student with a focus on Java development and
+                        full-stack
+                        solutions. Proficient in object-oriented programming, and passionate about transforming complex
+                        problems
+                        into clean, maintainable code. Through academic projects and personal initiatives, I've built
+                        scalable web
+                        applications and explored database design, backend logic, and performance optimization.
+                    </p>
 
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
+                    <p>
+                        I enjoy collaborative problem-solving, continuously adapting to new tools and frameworks.
+                        Currently seeking
+                        internship or entry-level opportunities where I can contribute to real-world projects, expand my
+                        backend
+                        expertise, and grow as a full-stack Java developer within a forward-thinking tech environment.
+                    </p>
+                </section>
+
+                <section class="service">
+                    <header>
+                        <h2 class="h2 article-title" style="margin-top: 40px;">What I Can Do</h2>
+                    </header>
+
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Full Stack Development</h4>
+                                <p class="service-item-text">
+                                    Build dynamic web apps using Java, Spring Boot, HTML, CSS, and JavaScript.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Backend Engineering</h4>
+                                <p class="service-item-text">
+                                    Develop RESTful APIs and backend services with Java and MySQL.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Database Management</h4>
+                                <p class="service-item-text">
+                                    Design and manage relational databases using MySQL and MongoDB.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Version Control</h4>
+                                <p class="service-item-text">
+                                    Use Git & GitHub for collaborative, trackable development.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <header style="margin-top: 50px;">
+                    <h2 class="h2 article-title">Technologies I Work With</h2>
+                </header>
+                <section class="tech-stack">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-spring-plain colored"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-c-plain colored"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <span>C++</span>
+                        </div>
+
+                        <div class="tech-item">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-github-original colored"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-react-plain colored"></i>
+                            <span>ReactJS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-vscode-plain colored"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </section>
+
+                <header style="margin-top: 50px;">
+                    <h2 class="h2 article-title">Journey</h2>
+                </header>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Java Fullstack Developer Intern</h4>
+                            <p style="color: var(--text-secondary); margin: 5px 0;">Infosys Springboard – CarCaddy
+                                Project | Remote</p>
+                            <span>Dec. 2024 — Jan. 2025</span>
+                            <p class="timeline-text">
+                                Developed RESTful backend services for a car rental management system using Spring Boot,
+                                Hibernate, and MySQL.
+                                Collaborated in Agile sprints to deliver key features including user authentication,
+                                booking management, and customer feedback systems.
+                                Implemented layered architecture following industry best practices to ensure code
+                                maintainability and scalability.
+                                Actively participated in code reviews and defect tracking through Jira, contributing to
+                                the complete software development lifecycle.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Amrita Vishwa Vidyapeetham</h4>
+                            <p style="color: var(--text-secondary); margin: 5px 0;">Bengaluru, India</p>
+                            <span>2022 — Present</span>
+                            <p class="timeline-text">
+                                Pursuing B.Tech in Computer Science and Engineering with CGPA 8.88. Graduation: 2026.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Manimukunda Secondary School</h4>
+                            <p style="color: var(--text-secondary); margin: 5px 0;">Rupandehi, Nepal</p>
+                            <span>2019 — 2020</span>
+                            <p class="timeline-text">Completed Higher Secondary Education with GPA 3.57/4.0</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Jaycees KinderGarten High School</h4>
+                            <p style="color: var(--text-secondary); margin: 5px 0;">Rupandehi, Nepal</p>
+                            <span>2018</span>
+                            <p class="timeline-text">Completed Secondary Education with GPA 3.40/4.0</p>
+                        </li>
+                    </ol>
+                </section>
+
+
+
+
+
+            </article>
+
+            <article class="projects" data-page="projects">
+                <header>
+                    <h2 class="h2 article-title">Projects</h2>
+                </header>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3 class="h3">My Projects</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Kamiyapp – Skill Sharing Platform</h4>
+                            <h6 style="color: var(--text-muted); margin: 5px 0;">Java, Spring Boot, Hibernate, MySQL
+                            </h6>
+                            <span>April 2025</span>
+                            <p class="timeline-text">
+                                A full-stack, role-based platform enabling users to book local services, track tasks,
+                                and share feedback
+                                seamlessly.
+                            </p>
+                            <button class="view-details" onclick="openModal('kamiyapp')">View Details</button>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Zero Trust Messaging Application</h4>
+                            <h6 style="color: var(--text-muted); margin: 5px 0;">Spring Security, JWT, AES, WebSockets
+                            </h6>
+                            <span>March 2025</span>
+                            <p class="timeline-text">
+                                Encrypted peer-to-peer messaging system built with a zero-trust architecture and
+                                granular access
+                                control.
+                            </p>
+                            <button class="view-details" onclick="openModal('ztma')">View Details</button>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">CarCaddy – Car Rental Automation</h4>
+                            <h6 style="color: var(--text-muted); margin: 5px 0;">Spring Boot, MySQL, Hibernate, REST
+                                APIs</h6>
+                            <span>January 2025</span>
+                            <p class="timeline-text">
+                                End-to-end automation of car rental workflows with secure authentication, dynamic
+                                pricing, and booking
+                                analytics.
+                            </p>
+                            <button class="view-details" onclick="openModal('carcaddy')">View Details</button>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Delivery Route Optimizer</h4>
+                            <h6 style="color: var(--text-muted); margin: 5px 0;">Java, KD-Tree, Dijkstra, Eclipse</h6>
+                            <span>May 2024</span>
+                            <p class="timeline-text">
+                                Geographic pathfinding engine using Dijkstra's algorithm and KD-Tree for last-mile
+                                delivery
+                                optimization.
+                            </p>
+                            <button class="view-details" onclick="openModal('delivery')">View Details</button>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+
+            <article class="certificates" data-page="certificates">
+                <header>
+                    <h2 class="h2 article-title">Certifications</h2>
+                </header>
+
+                <section class="projects">
+                    <ul class="project-list">
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="./assets/images/Programming Using Java.png" alt="Programming Using Java"
+                                        loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Programming using Java</h3>
+                                <p class="project-category">Infosys</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="assets/images/aws.png" alt="AWS" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">AWS Academy Graduate - AWS Academy Cloud Foundations</h3>
+                                <p class="project-category">AWS Academy</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="assets/images/DBMS 1.png" alt="DBMS 1" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Database Management System</h3>
+                                <p class="project-category">Infosys</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="assets/images/Problem_Solving_Intermediate.png" alt="Problem Solving"
+                                        loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Problem Solving (Intermediate)</h3>
+                                <p class="project-category">HackerRank</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="assets/images/Java Training udemy.jpg" alt="Java Training"
+                                        loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Java Training</h3>
+                                <p class="project-category">Udemy</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <img src="assets/images/DSA.png" alt="DSA" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Data Structures and Algorithms</h3>
+                                <p class="project-category">Infosys</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="contact" data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Get In Touch</h3>
+
+                    <form action="#" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                                data-form-input />
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required
+                                data-form-input />
+                        </div>
+
+                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
+
+                        <button class="form-btn" type="submit" data-form-btn>
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
         </div>
 
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a href="mailto:aadityay222@gmail" class="contact-link"
-                  >aadityay222@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-
-                <a href="tel:+917892835803" class="contact-link"
-                  >+91 7892835803</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="calendar-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Birthday</p>
-
-                <time datetime="1982-06-23">1st October, 2003</time>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>
-                  Amrita Vishwa Vidyapeetham, Banglore, Karnataka
-                </address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/aaditya-yadav-6a0876257/"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-LinkedIn"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://github.com/aaditya-29"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://www.instagram.com/aa_di_ty_a_/"
-                target="_blank"
-                class="social-link"
-              >
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <!--
-      - #main-content
-    -->
-
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Certificates</button>
-            </li>
-
-            <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
-      -->
-
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-
-          <section class="about-text">
-            <p>
-              Motivated Computer Science and Engineering student with a strong
-              passion for Java development. Well-versed in object-oriented
-              programming principles and backed by practical experience through
-              coursework and projects.
-            </p>
-
-            <p>
-              Demonstrated ability to develop and debug software applications,
-              collaborate in team environments, and adapt to new technologies
-              quickly. Eager to apply problem-solving skills and passion for
-              coding to contribute to innovative projects as an intern or
-              entry-level Java developer at a forward-thinking company and
-              further refine my expertise in Java development within a
-              collaborative environment.
-            </p>
-          </section>
-
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What I can do?</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-design.svg
-                "
-                    alt="design icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web design</h4>
-
-                  <p class="service-item-text">High-quality design for web.</p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-dev.svg"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web development</h4>
-
-                  <p class="service-item-text">
-                    High-quality development of sites .
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/full_stack.svg"
-                    alt="full_stack icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Full Stack Development</h4>
-
-                  <p class="service-item-text">
-                    Crafting full-stack web solutions with a focus on end-to-end
-                    functionality and performance.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-photo.svg"
-                    alt="camera icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Database Management</h4>
-
-                  <p class="service-item-text">
-                    Design and manage relational databases using MySQL.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials
-        -->
-
-          <section class="testimonials">
-            <h3 class="h3 testimonials-title">Testimonials</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-1.png"
-                      alt="Samip Aanand Shah"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Samip Aanand Shah
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Aaditya was hired to create a corporate identity. We were
-                      very pleased with the work done. He has experience and is
-                      very concerned about the needs of client. Lorem ipsum
-                      dolor sit amet, ullamcous cididt consectetur adipiscing
-                      elit, seds do et eiusmod tempor incididunt ut laborels
-                      dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-2.png"
-                      alt="Jessica miller"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Jessica miller
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Aaditya was hired to create a corporate identity. We were
-                      very pleased with the work done. He has experience and is
-                      very concerned about the needs of client. Lorem ipsum
-                      dolor sit amet, ullamcous cididt consectetur adipiscing
-                      elit, seds do et eiusmod tempor incididunt ut laborels
-                      dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-3.png"
-                      alt="Emily evans"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Emily evans
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Aaditya was hired to create a corporate identity. We were
-                      very pleased with the work done. He has experience and is
-                      very concerned about the needs of client. Lorem ipsum
-                      dolor sit amet, ullamcous cididt consectetur adipiscing
-                      elit, seds do et eiusmod tempor incididunt ut laborels
-                      dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-4.png"
-                      alt="Henry william"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Henry william
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Aaditya was hired to create a corporate identity. We were
-                      very pleased with the work done. He has experience and is
-                      very concerned about the needs of client. Lorem ipsum
-                      dolor sit amet, ullamcous cididt consectetur adipiscing
-                      elit, seds do et eiusmod tempor incididunt ut laborels
-                      dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials modal
-        -->
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img
-                    src="./assets/images/avatar-1.png"
-                    alt="Daniel lewis"
-                    width="80"
-                    data-modal-img
-                  />
-                </figure>
-
-                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
-              </div>
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-                <time datetime="2021-06-14">14 June, 2021</time>
-
-                <div data-modal-text>
-                  <p>
-                    Aaditya was hired to create a corporate identity. We were
-                    very pleased with the work done. He has experience and is
-                    very concerned about the needs of client. Lorem ipsum dolor
-                    sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                    do et eiusmod tempor incididunt ut laborels dolore magnarels
-                    alia.
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!--
-          - clients
-        -->
-
-          <!-- <section class="clients">
-            <h3 class="h3 clients-title">Clients</h3>
-
-            <ul class="clients-list has-scrollbar">
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-1-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-2-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-3-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-4-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-5-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="./assets/images/logo-6-color.png"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-            </ul>
-          </section> -->
-        </article>
-
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-              <!-- Download Resume Button -->
-              <a
-                href="./Aaditya Yadav Resume.pdf"
-                download="./Aaditya Yadav Resume.pdf"
-              >
-                <img
-                  src="/assets/images/download-icon.svg"
-                  alt="Download Resume"
-                  id="download-button"
-                />
-              </a>
+        <footer class="bottom-footer">
+            <div class="footer-left">
+                <h2 class="footer-name">Connect with Me</h2>
+                <p class="footer-tagline">Let’s build something amazing together</p>
             </div>
 
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Amrita Vishwa Vidyapeetham
-                </h4>
-                <p style="color: white">Bengaluru, India</p>
-                <span>2022 — Present</span>
+            <div class="footer-links">
+                <a href="https://github.com/aaditya-29" target="_blank" class="footer-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aaditya29/" target="_blank" class="footer-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:yadavaaditya3029@gmail.com" class="footer-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://x.com/aa_di_ty_a_" target="_blank" class="footer-link" aria-label="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
 
-                <p class="timeline-text">
-                  Currently pursuing my B.tech from Amrita Vishwa Vidyapeetham
-                  with a CGPA of 8.93 and expecting to gradute in 2026.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Manimukunda Secondary school
-                </h4>
-                <p style="color: white">Rupandehi, Nepal</p>
-
-                <span>2018 — 2020 <br />High school</span>
-
-                <!-- <p class="timeline-text">
-                  Ratione voluptatem sequi nesciunt, facere quisquams facere
-                  menda ossimus, omnis voluptas assumenda est omnis..
-                </p> -->
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Jaycees Secondary school</h4>
-                <p style="color: white">Rupandehi, Nepal</p>
-                <span>School level</span>
-
-                <!-- <p class="timeline-text">
-                  Duis aute irure dolor in reprehenderit in voluptate, quila
-                  voluptas mag odit aut fugit, sed consequuntur magni dolores
-                  eos.
-                </p> -->
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Projects</h3>
             </div>
 
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Delivery Route Optimization
-                </h4>
+        </footer>
 
-                <span>May 2024</span>
-
-                <p class="timeline-text">
-                  Modified an algorithm to optimize delivery routes, minimizing
-                  travel distance and costs for multi-parcel deliveries where I
-                  applied advanced problem-solving techniques to achieve a more
-                  efficient and streamlined delivery process.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Medical Management System
-                </h4>
-
-                <span>December 2023</span>
-
-                <p class="timeline-text">
-                  Streamlined inventory and sales management with increased
-                  accuracy in tracking medicine details and quantities utilizing
-                  PHP and MySQL for effective data management, providing
-                  reliable storage and seamless retrieval of medicine records
-                  and sales data.
-                </p>
-              </li>
-
-              <!-- <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Web designer</h4>
-
-                <span>2010 — 2013</span>
-
-                <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
-                </p>
-              </li> -->
-            </ol>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Java</h5>
-                  <!-- <data value="80">80%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">JavaScript</h5>
-                  <!-- <data value="70">50%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">C++</h5>
-                  <!-- <data value="90">90%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">MySQL</h5>
-                  <!-- <data value="50">50%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">HTML</h5>
-                  <!-- <data value="50">50%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Teamwork</h5>
-                  <!-- <data value="50">50%</data> -->
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 95%"></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="certificates" data-page="certificates">
-          <header>
-            <h2 class="h2 article-title">Certifications</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <!-- <li class="filter-item">
-                <button data-filter-btn>Web design</button>
-              </li> -->
-
-              <!-- <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-              </li> -->
-
-              <!-- <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-              </li> -->
-            </ul>
-
-            <div class="filter-select-box popup">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <!-- <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web design</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web development</button>
-                </li>
-              </ul> -->
-            </div>
-
-            <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Programming Using Java.png"
-                      alt="Programming Using java"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Programming using Java</h3>
-
-                  <p class="project-category">Infosys</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/DBMS 1.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    Database Management System part-1
-                  </h3>
-
-                  <p class="project-category">Infosys</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/DBMS 2.png"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    Database Management System part-2
-                  </h3>
-
-                  <p class="project-category">Infosys</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Java Foundation.png"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Java Foundation</h3>
-
-                  <p class="project-category">Infosys</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Java Training udemy.jpg"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Java Training</h3>
-
-                  <p class="project-category">udemy</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/DSA.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Data Structures and algorithm</h3>
-
-                  <p class="project-category">Infosys</p>
-                </a>
-              </li>
-
-              <!-- <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-7.png"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Summary</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-8.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-9.png"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Arrival</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li> -->
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact</h2>
-          </header>
-
-          <section class="mapbox" data-mapbox>
-            <figure>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1982714138585!2d77.67316457476022!3d12.89496878741337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1339d7500cd3%3A0x4b4fbdff03bfee09!2sAmrita%20Vishwa%20Vidyapeetham%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1724404039953!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </figure>
-          </section>
-
-          <section class="contact-form">
-            <h3 class="h3 form-title">Contact Form</h3>
-
-            <form action="#" class="form" data-form>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="fullname"
-                  class="form-input"
-                  placeholder="Full name"
-                  required
-                  data-form-input
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="Email address"
-                  required
-                  data-form-input
-                />
-              </div>
-
-              <textarea
-                name="message"
-                class="form-input"
-                placeholder="Your Message"
-                required
-                data-form-input
-              ></textarea>
-
-              <button class="form-btn" type="submit" disabled data-form-btn>
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
-            </form>
-          </section>
-        </article>
-      </div>
     </main>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/mail.js"></script>
+    <!-- Modals -->
+    <div id="kamiyapp" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kamiyapp')">&times;</span>
+            <div class="modal-inner">
+                <h3>Kamiyapp – Skill Sharing Platform</h3>
 
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+                <p>
+                    Kamiyapp is a full-stack web platform that connects verified service professionals with users
+                    looking
+                    for
+                    reliable local help. It handles end-to-end workflows—from booking to task completion and
+                    feedback—using
+                    a secure, role-based structure.
+                </p>
+
+                <h4>Tech Stack</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Backend:</strong> Java, Spring Boot, Hibernate</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Database:</strong> MySQL</li>
+                    <li><strong>APIs:</strong> RESTful APIs</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Role-Based Dashboards:</strong> Customized views for Admins, Workers, and Requesters
+                    </li>
+                    <li><strong>Service Booking:</strong> Real-time availability checks</li>
+                    <li><strong>Status Tracking:</strong> Monitors job lifecycle stages</li>
+                    <li><strong>Feedback & Rating:</strong> Transparent reviews with moderation</li>
+                </ul>
+
+                <div style="text-align:center; margin-top: 30px;">
+                    <a href="https://github.com/aaditya-29/Skill_Sharing_Platform" target="_blank">
+                        View Code on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ztma" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ztma')">&times;</span>
+            <div class="modal-inner">
+                <h3>Zero Trust Messaging Application</h3>
+
+                <p>
+                    A highly secure, real-time communication platform built using the Zero Trust security model. Ensures
+                    end-to-end encrypted messaging and file sharing between verified users.
+                </p>
+
+                <h4>Tech Stack</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Backend:</strong> Java, Spring Boot, WebSocket</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Database:</strong> MongoDB</li>
+                    <li><strong>Security:</strong> RSA, AES, OTP-based MFA</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Email Verification:</strong> Account activation via email</li>
+                    <li><strong>Multi-Factor Authentication:</strong> Dual-layer login security</li>
+                    <li><strong>End-to-End Encryption:</strong> AES encryption with RSA key exchange</li>
+                    <li><strong>Secure File Sharing:</strong> Encrypted file transfers</li>
+                    <li><strong>Forward Secrecy:</strong> Rotating session keys</li>
+                </ul>
+
+                <div style="text-align:center; margin-top: 30px;">
+                    <a href="https://github.com/aaditya-29/Zero-Trust-Messaging-App" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carcaddy" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('carcaddy')">&times;</span>
+            <div class="modal-inner">
+                <h3>CarCaddy – Car Rental Automation</h3>
+
+                <p>
+                    Comprehensive car rental management system that automates booking, inventory, and customer
+                    management
+                    for enhanced operational efficiency.
+                </p>
+
+                <h4>Tech Stack</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Backend:</strong> Java, Spring Boot, Hibernate</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Database:</strong> MySQL</li>
+                    <li><strong>APIs:</strong> RESTful APIs</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Booking Management:</strong> Real-time car availability system</li>
+                    <li><strong>Inventory Control:</strong> Track car status and maintenance</li>
+                    <li><strong>Customer Management:</strong> Store customer data and history</li>
+                    <li><strong>Billing System:</strong> Automated invoice generation</li>
+                </ul>
+
+                <div style="text-align:center; margin-top: 30px;">
+                    <a href="https://github.com/SpringBoardMentor413/Car_Caddy_Backend_Batch1" target="_blank">
+                        View Backend
+                    </a>
+                    <span style="margin: 0 10px; color: var(--text-muted);">|</span>
+                    <a href="https://github.com/SpringBoardMentor413/Car_Caddy_Frontend_Batch1" target="_blank">
+                        View Frontend
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="delivery" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('delivery')">&times;</span>
+            <div class="modal-inner">
+                <h3>Delivery Route Optimizer</h3>
+
+                <p>
+                    Java-based application that enhances last-mile logistics efficiency by computing shortest paths
+                    using
+                    real-world map data and optimization algorithms.
+                </p>
+
+                <h4>Tech Stack</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Language:</strong> Java</li>
+                    <li><strong>Algorithms:</strong> KNN, Dijkstra's Algorithm</li>
+                    <li><strong>Data Structures:</strong> KD-Tree, Graphs</li>
+                    <li><strong>Tools:</strong> Apache Commons, JUnit, Eclipse</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Route Computation:</strong> Dijkstra's algorithm for shortest paths</li>
+                    <li><strong>Geolocation Search:</strong> KD-Tree for fast lookups</li>
+                    <li><strong>Scalable Design:</strong> Supports large datasets</li>
+                    <li><strong>Real-World Data:</strong> OSM XML parsing</li>
+                </ul>
+
+                <div style="text-align:center; margin-top: 30px;">
+                    <a href="https://github.com/aaditya-29/Delivery-Route-Optimizer" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const navLinks = document.querySelectorAll('[data-nav-link]');
+        const pages = document.querySelectorAll('[data-page]');
+
+        navLinks.forEach((link, index) => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                pages.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                pages[index].classList.add('active');
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const titles = [
+                "Software Engineer",
+                "Backend Developer",
+                "Full Stack Developer",
+                "Java Developer",
+                "Spring Boot Enthusiast"
+            ];
+
+            let index = 0;
+            const titleElement = document.getElementById("rotating-title");
+
+            setInterval(() => {
+                index = (index + 1) % titles.length;
+                titleElement.classList.remove("fade-in");
+                void titleElement.offsetWidth;
+                titleElement.textContent = titles[index];
+                titleElement.classList.add("fade-in");
+            }, 2500);
+        });
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.addEventListener('click', function (e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                const openModals = document.querySelectorAll('.modal:not(.hidden)');
+                openModals.forEach(function (modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+
+        const form = document.querySelector('[data-form]');
+        const formInputs = document.querySelectorAll('[data-form-input]');
+        const formBtn = document.querySelector('[data-form-btn]');
+
+        formInputs.forEach(input => {
+            input.addEventListener('input', function () {
+                if (form.checkValidity()) {
+                    formBtn.removeAttribute('disabled');
+                } else {
+                    formBtn.setAttribute('disabled', '');
+                }
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Message sent! (Demo mode - connect your email service)');
+            form.reset();
+            formBtn.setAttribute('disabled', '');
+        });
+    </script>
+</body>
+
 </html>
