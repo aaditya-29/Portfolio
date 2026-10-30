@@ -1,216 +1,125 @@
-'use strict';
+"use strict";
 
-
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+// Anchor navigation remains usable without JavaScript. Enhance it with a location cue.
+const sectionLinks = [...document.querySelectorAll(".section-nav a")];
+const trackedSections = sectionLinks
+  .map((link) => document.querySelector(link.hash))
+  .filter(Boolean);
+let navigationFrame;
+function updateLocationCue() {
+  navigationFrame = undefined;
+  const offset = window.innerWidth > 700 ? 100 : 60;
+  // The final section can be too short to reach the usual top threshold.
+  const atBottom =
+    window.scrollY > 0 &&
+    document.documentElement.scrollHeight -
+      window.innerHeight -
+      window.scrollY <=
+      1;
+  const current = atBottom
+    ? trackedSections.at(-1)
+    : trackedSections.findLast(
+        (section) => section.getBoundingClientRect().top <= offset,
+      );
+  sectionLinks.forEach((link) => {
+    if (current && link.hash === `#${current.id}`)
+      link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
   });
 }
+function scheduleLocationCue() {
+  if (!navigationFrame)
+    navigationFrame = requestAnimationFrame(updateLocationCue);
+}
+window.addEventListener("scroll", scheduleLocationCue, { passive: true });
+window.addEventListener("resize", scheduleLocationCue);
+scheduleLocationCue();
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
+// Project notes are native disclosures: keyboard accessible and independent of JS.
+function revealLinkedDetails() {
+  let id;
+  try {
+    id = decodeURIComponent(window.location.hash.slice(1));
+  } catch {
+    return; // An incomplete percent escape is not a usable element ID.
   }
-
+  const target = document.getElementById(id);
+  if (target instanceof HTMLDetailsElement) target.open = true;
 }
+window.addEventListener("hashchange", revealLinkedDetails);
+revealLinkedDetails();
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
+// Optional project media is built from known assets; remove failed requests cleanly.
+document.querySelectorAll("[data-project-image] img").forEach((image) => {
+  function removeFailedImage() {
+    const media = image.closest("[data-project-media]");
+    image.closest("[data-project-image]")?.remove();
+    media?.querySelectorAll("[data-project-gallery]").forEach((gallery) => {
+      if (!gallery.querySelector("img")) gallery.remove();
+    });
+    if (media && !media.querySelector("img")) media.remove();
+    else if (media) {
+      media.querySelector("h4").textContent = media.querySelector(
+        ".project-figure",
+      )
+        ? "Architecture and interface"
+        : "Interface";
     }
+  }
+  image.addEventListener("error", removeFailedImage, { once: true });
+  if (image.complete && image.naturalWidth === 0) removeFailedImage();
+});
 
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-
-
-//certificates
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Get all the icons
-  const icons = document.querySelectorAll(".project-item-icon-box ion-icon");
-  const popup = document.createElement("div");
-  const overlay = document.createElement("div");
-
-  // Set up the popup structure
-  popup.classList.add("popup");
-  overlay.classList.add("popup-overlay");
-
-  document.body.appendChild(popup);
-  document.body.appendChild(overlay);
-
-  // Add event listeners to each icon
-  icons.forEach(icon => {
-    icon.addEventListener("click", function() {
-      const imgSrc = this.closest("a").querySelector("img").getAttribute("src");
-      popup.innerHTML = `
-        <button class="popup-close">&times;</button>
-        <img src="${imgSrc}" alt="Certificate">
-      `;
-
-      popup.style.display = "block";
-      overlay.style.display = "block";
-      // Trigger animation by removing and adding the class
-      popup.classList.remove("hidden");
-      overlay.classList.remove("hidden");
-      // Reset animation
-      popup.style.animation = 'none';
-      overlay.style.animation = 'none';
-      // Trigger reflow
-      popup.offsetHeight; // trigger reflow
-      popup.style.animation = 'popup-fade-in 0.5s ease forwards';
-      overlay.style.animation = 'popup-fade-in 0.5s ease forwards';
+// Only certificates need a dialog. Native dialog handles focus trapping and Escape.
+const viewer = document.getElementById("certificate-viewer");
+if (viewer && typeof viewer.showModal === "function") {
+  const viewerImg = viewer.querySelector("[data-viewer-img]");
+  let opener;
+  document.querySelectorAll("[data-certificate]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      opener = link;
+      viewerImg.src = link.href;
+      viewerImg.alt = `${link.querySelector(".certificate-title").textContent} certificate`;
+      const thumbnail = link.querySelector("img");
+      viewerImg.width = Number(thumbnail.getAttribute("width"));
+      viewerImg.height = Number(thumbnail.getAttribute("height"));
+      viewer.querySelector("[data-viewer-original]").href = link.href;
+      viewer.querySelector("[data-viewer-title]").textContent =
+        link.querySelector(".certificate-title").textContent;
+      viewer.querySelector("[data-viewer-issuer]").textContent =
+        link.querySelector(".cert-issuer").textContent;
+      viewer.showModal();
+      viewer.scrollTop = 0;
     });
   });
-
-  // Close the popup when clicking the close button or the overlay
-  document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("popup-close") || e.target.classList.contains("popup-overlay")) {
-      popup.style.animation = 'popup-fade-out 0.5s ease forwards';
-      overlay.style.animation = 'popup-fade-out 0.5s ease forwards';
-      setTimeout(() => {
-        popup.style.display = "none";
-        overlay.style.display = "none";
-        popup.classList.add("hidden");
-        overlay.classList.add("hidden");
-      }, 500); // Match duration with animation
-    }
+  viewer
+    .querySelector("[data-modal-close]")
+    .addEventListener("click", () => viewer.close());
+  // Require both pointer-down and click outside the dialog to avoid closing after a drag.
+  const outside = (event) => {
+    const box = viewer.getBoundingClientRect();
+    return (
+      event.clientX < box.left ||
+      event.clientX > box.right ||
+      event.clientY < box.top ||
+      event.clientY > box.bottom
+    );
+  };
+  let startedOutside = false;
+  viewer.addEventListener("pointerdown", (event) => {
+    startedOutside = event.target === viewer && outside(event);
   });
+  viewer.addEventListener("click", (event) => {
+    if (startedOutside && event.target === viewer && outside(event))
+      viewer.close();
+    startedOutside = false;
+  });
+  viewer.addEventListener("close", () =>
+    opener?.focus({ preventScroll: true }),
+  );
+}
+
+document.querySelectorAll("[data-year]").forEach((element) => {
+  element.textContent = new Date().getFullYear();
 });

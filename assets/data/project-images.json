@@ -1,0 +1,51 @@
+{
+  "kamiyapp": [
+    {
+      "src": "assets/images/kamiyapp-architecture.png",
+      "alt": "Kamiyapp architecture: requester, worker, and admin interfaces connect to Spring Boot services and a data layer.",
+      "caption": "System architecture",
+      "width": 1757,
+      "height": 881,
+      "layout": "wide",
+      "originalLabel": "Open full-size Kamiyapp — Skill Sharing Platform architecture diagram"
+    },
+    {
+      "src": "assets/images/kamiyapp-ui-booking.png",
+      "alt": "Bookings screen listing booking status, inspection, and payment details",
+      "caption": "Fig. 1a — Bookings",
+      "width": 320,
+      "height": 699,
+      "layout": "phone"
+    },
+    {
+      "src": "assets/images/kamiyapp-ui-feedback.png",
+      "alt": "Feedback form with completed booking selector, rating, and comment",
+      "caption": "Fig. 1b — Feedback",
+      "width": 316,
+      "height": 698,
+      "layout": "phone"
+    }
+  ],
+  "ztma": [
+    {
+      "src": "assets/images/ztma-architecture.png",
+      "alt": "Messaging architecture showing an untrusted client, authentication gateway, backend services, and protected storage.",
+      "caption": "System architecture",
+      "width": 1500,
+      "height": 758,
+      "layout": "wide",
+      "originalLabel": "Open full-size Zero Trust Messaging Application architecture diagram"
+    },
+    {
+      "src": "assets/images/ztma-ui-chat.png",
+      "alt": "Secure chat screen with recipient, message, sensitive mode, and file attachment fields, above a list of encrypted and expired messages",
+      "caption": "Fig. 2a — Secure chat (sender addresses redacted)",
+      "width": 970,
+      "height": 993,
+      "layout": "medium"
+    }
+  ],
+  "carcaddy": [],
+  "delivery": [],
+  "mindbridge": []
+}

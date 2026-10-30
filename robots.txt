@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yadavaaditya.com.np/sitemap.xml
